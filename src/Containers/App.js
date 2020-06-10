@@ -33,9 +33,11 @@ class App extends Component {
     }
 
     componentDidMount(){
-        const url = 'https://jsonplaceholder.typicode.com/users'
-        fetch(url)
-            .then(response => {
+        //const url = 'https://jsonplaceholder.typicode.com/users'
+        fetch( 'https://jsonplaceholder.typicode.com/users', {
+             credentials: "include"
+            }
+        ).then(response => {
                 return response.json()
             })
             .then( users => {
