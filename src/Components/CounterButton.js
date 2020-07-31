@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 
-class CounterButton extends PureComponent {
+class CounterButton extends Component {
   constructor() {
     super();
     this.state = {
@@ -22,7 +22,6 @@ class CounterButton extends PureComponent {
   }
 
   render() {
-    console.log('CounterButton')
     return (
       <button color={this.props.color} onClick={this.updateCount} className="bg-blue-500 hover:bg-blue-400 text-white my-6 font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
         Count: {this.state.count}
