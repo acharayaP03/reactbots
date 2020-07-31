@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 
-import CardList from '../Components/CardList'
+import CardList from '../Components/CardList';
+
+import Header from '../Components/Header';
 
 import SearchBox from  '../Components/Searchbox';
 
@@ -43,7 +45,7 @@ class App extends Component {
 
         return (
                 <div>
-                    <h1 className="text-5xl m-6 uppercase cursor-pointer transition duration-500 ease-in-out transform hover:skew-y-3">Robo Friends</h1>
+                    <Header />
                     <SearchBox searchChange= { onSearchChange } />
                     <Scroll>
                         {          
